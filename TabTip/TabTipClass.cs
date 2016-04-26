@@ -27,10 +27,11 @@ public class TabTipClass
     {
         try
         {
-            string file = @"%HomeDrive%\Program Files\\Common Files\\microsoft shared\\ink\\TabTip.exe";
+            //string file = @"%HomeDrive%\Program Files\\Common Files\\microsoft shared\\ink\\TabTip.exe";
+            string file = @"C:\\Program Files\\Common Files\\microsoft shared\\ink\\TabTip.exe";
             if (!System.IO.File.Exists(file))
                 return 0;
-            Process.Start(file);
+            Process pro = Process.Start(file);
             return 1;
         }
         catch (Exception)
